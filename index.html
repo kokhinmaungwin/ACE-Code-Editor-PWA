@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACE Editor PWA</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f62fe" />
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+    #editor {
+      flex: 1;
+      height: 100%;
+    }
+    .controls {
+      padding: 10px;
+      background: #f5f7fb;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      background: #0f62fe;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background: #0b4dcc;
+    }
+    #installBtn {
+      display: none;
+      margin-left: auto;
+    }
+  </style>
+
+  <!-- ACE CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"></script>
+</head>
+<body>
+
+  <div class="controls">
+    <button id="copyBtn">Copy</button>
+    <button id="clearBtn">Clear</button>
+    <button id="installBtn">Install App</button>
+  </div>
+
+  <div id="editor">/* Write your code here... */</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
