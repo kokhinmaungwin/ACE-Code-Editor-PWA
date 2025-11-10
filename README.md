@@ -46,7 +46,7 @@ http://localhost:3000
 
 ---
 
-📱 Install App
+## 📱 Install App
 
 Chrome → Menu → Add to Home Screen
 
@@ -58,7 +58,7 @@ Works on Android / Desktop browsers
 
 ---
 
-🛠 Tech Used
+## 🛠 Tech Used
 
 Technology	Purpose
 
@@ -71,16 +71,16 @@ Web Manifest	Installable app
 
 ---
 
-📎 CDN Reference
+## 📎 CDN Reference
 
-ACE Editor:
+- ACE Editor:
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"></script>
 
 
 ---
 
-💡 Future Improvements
+## 💡 Future Improvements
 
 Multi-language support (JS, HTML, CSS, Python…)
 
@@ -94,7 +94,7 @@ File import/export
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Created ❤️ Khin Maung Win
 Built for fun & productivity
@@ -103,4 +103,4 @@ Offline coding anywhere!
 
 ---
 
-⭐️ If you like this tool, star the repo!
+## ⭐️ If you like this tool, star the repo!
