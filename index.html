@@ -16,17 +16,14 @@
       flex-direction: column;
       font-family: Arial, sans-serif;
     }
-    #editor {
-      flex: 1;
-      height: 100%;
-    }
     .controls {
       padding: 10px;
       background: #f5f7fb;
       display: flex;
       gap: 10px;
+      align-items: center;
     }
-    button {
+    button, select {
       background: #0f62fe;
       color: white;
       border: none;
@@ -36,12 +33,27 @@
       font-size: 14px;
       transition: background-color 0.2s ease;
     }
-    button:hover {
+    button:hover, select:hover {
       background: #0b4dcc;
     }
     #installBtn {
       display: none;
       margin-left: auto;
+    }
+    #editor {
+      flex: 1;
+      height: 300px;
+    }
+    #preview {
+      height: 150px;
+      background: #f0f0f0;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      border: 1px solid #ccc;
     }
   </style>
 
@@ -53,10 +65,23 @@
   <div class="controls">
     <button id="copyBtn">Copy</button>
     <button id="clearBtn">Clear</button>
+
+    <select id="themeSelector" title="Select ACE Theme">
+      <option value="monokai">Monokai</option>
+      <option value="github">GitHub</option>
+      <option value="tomorrow">Tomorrow</option>
+      <option value="solarized_light">Solarized Light</option>
+      <option value="solarized_dark">Solarized Dark</option>
+      <option value="twilight">Twilight</option>
+      <option value="kuroir">Kuroir</option>
+    </select>
+
     <button id="installBtn">Install App</button>
   </div>
 
   <div id="editor">/* Write your code here... */</div>
+  <h3 style="margin:10px;">Preview:</h3>
+  <div id="preview"></div>
 
   <script src="app.js"></script>
 </body>
