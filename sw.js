@@ -1,19 +1,19 @@
 const CACHE_NAME = 'ace-editor-pwa-v1';
-const OFFLINE_URL = './';
+const OFFLINE_URL = "/ace-pwa/";
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache =>
       cache.addAll([
-        './',
-        './index.html',
-        './app.js',
-        './manifest.json',
-        './icons/icon-192.svg',
-        './icons/icon-512.svg',
-        './icons/icon-192.png',
-        './icons/icon-512.png',
-        'https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js'
+        "/ace-pwa/",
+        "/ace-pwa/index.html",
+        "/ace-pwa/app.js",
+        "/ace-pwa/manifest.json",
+        "/ace-pwa/icons/icon-192.svg",
+        "/ace-pwa/icons/icon-512.svg",
+        "/ace-pwa/icons/icon-192.png",
+        "/ace-pwa/icons/icon-512.png",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"
       ])
     )
   );
