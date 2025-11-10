@@ -5,14 +5,14 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache =>
       cache.addAll([
-        "/ace-pwa/",
-        "/ace-pwa/index.html",
-        "/ace-pwa/app.js",
-        "/ace-pwa/manifest.json",
-        "/ace-pwa/icons/icon-192.svg",
-        "/ace-pwa/icons/icon-512.svg",
-        "/ace-pwa/icons/icon-192.png",
-        "/ace-pwa/icons/icon-512.png",
+        "/ace-code-editor-pwa/",
+        "/ace-code-editor-pwa/index.html",
+        "/ace-code-editor-pwa/app.js",
+        "/ace-code-editor-pwa/manifest.json",
+        "/ace-code-editor-pwa/icons/icon-192.svg",
+        "/ace-code-editor-pwa/icons/icon-512.svg",
+        "/ace-code-editor-pwa/icons/icon-192.png",
+        "/ace-code-editor-pwa/icons/icon-512.png",
         "https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"
       ])
     )
