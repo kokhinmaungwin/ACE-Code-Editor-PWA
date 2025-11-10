@@ -1,20 +1,23 @@
 const editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
-editor.session.setMode("ace/mode/html"); // html mode ပြောင်းလိုက်ပါ
+editor.session.setMode("ace/mode/html"); // HTML mode
 editor.setOptions({
   fontSize: "14pt",
   showPrintMargin: false,
 });
 
 const preview = document.getElementById("preview");
-
-// Update preview on editor change
+function stripHTML(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
 editor.session.on('change', () => {
-  preview.innerHTML = editor.getValue(); // innerHTML ဖြစ်ဖို့ပြောင်းလိုက်
+  const rawHtml = editor.getValue();
+  preview.textContent = stripHTML(rawHtml);
 });
 
-// Initial preview
-preview.innerHTML = editor.getValue();
+preview.textContent = stripHTML(editor.getValue());
 
 // Copy button
 document.getElementById("copyBtn").addEventListener("click", () => {
@@ -28,10 +31,10 @@ document.getElementById("copyBtn").addEventListener("click", () => {
 // Clear button
 document.getElementById("clearBtn").addEventListener("click", () => {
   editor.setValue("");
-  preview.innerHTML = "";
+  preview.textContent = "";
 });
 
-// Theme selector
+// Theme selector 
 document.getElementById("themeSelector").addEventListener("change", (e) => {
   const theme = e.target.value;
   editor.setTheme("ace/theme/" + theme);
