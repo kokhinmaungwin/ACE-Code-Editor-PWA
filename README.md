@@ -23,16 +23,6 @@ You can write, edit, copy, clear code — and install it like a real app ✅
 
 ---
 
-📎 CDN Reference
-
-ACE Editor:
-   ```html
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"></script>
-
-
----
-
-
 ## 📱 Install Guide
 
 ### ✅ Desktop Chrome
