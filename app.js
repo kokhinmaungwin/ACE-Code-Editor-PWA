@@ -1,44 +1,37 @@
-// Initialize ACE editor
 const editor = ace.edit("editor");
-editor.setTheme("ace/theme/github");
+editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/javascript");
+editor.setOptions({
+  fontSize: "14pt",
+  showPrintMargin: false,
+});
+
+const preview = document.getElementById("preview");
+
+// Update preview on editor change
+editor.session.on('change', () => {
+  preview.textContent = editor.getValue();
+});
+// Initial preview
+preview.textContent = editor.getValue();
 
 // Copy button
-document.getElementById('copyBtn').addEventListener('click', () => {
-  const code = editor.getValue();
-  navigator.clipboard.writeText(code).then(() => {
-    alert('Copied to clipboard!');
-  }).catch(() => alert('Copy failed'));
+document.getElementById("copyBtn").addEventListener("click", () => {
+  navigator.clipboard.writeText(editor.getValue()).then(() => {
+    alert("Copied to clipboard!");
+  }).catch(() => {
+    alert("Copy failed.");
+  });
 });
 
 // Clear button
-document.getElementById('clearBtn').addEventListener('click', () => {
-  editor.setValue('');
+document.getElementById("clearBtn").addEventListener("click", () => {
+  editor.setValue("");
+  preview.textContent = "";
 });
 
-// PWA install prompt handling
-let deferredPrompt;
-const installBtn = document.getElementById('installBtn');
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  installBtn.style.display = 'inline-block';
+// Theme selector
+document.getElementById("themeSelector").addEventListener("change", (e) => {
+  const theme = e.target.value;
+  editor.setTheme("ace/theme/" + theme);
 });
-
-installBtn.addEventListener('click', async () => {
-  installBtn.style.display = 'none';
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log('User response to the install prompt:', outcome);
-    deferredPrompt = null;
-  }
-});
-
-// Register service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(() => {
-    console.warn('Service worker registration failed');
-  });
-}
