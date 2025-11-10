@@ -1,6 +1,6 @@
 const editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
-editor.session.setMode("ace/mode/html"); // HTML mode
+editor.session.setMode("ace/mode/html"); 
 editor.setOptions({
   fontSize: "14pt",
   showPrintMargin: false,
@@ -40,23 +40,30 @@ document.getElementById("themeSelector").addEventListener("change", (e) => {
   editor.setTheme("ace/theme/" + theme);
 });
 
-// PWA Install button
 let deferredPrompt;
-const installBtn = document.getElementById("installBtn");
+const installBtn = document.getElementById('installBtn');
 
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
+// Before install prompt event ကို capture
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault(); 
   deferredPrompt = e;
-  installBtn.style.display = "block";
+  installBtn.style.display = 'inline-block'; 
 });
 
-installBtn.addEventListener("click", async () => {
+installBtn.addEventListener('click', async () => {
   if (!deferredPrompt) return;
   deferredPrompt.prompt();
+  const choiceResult = await deferredPrompt.userChoice;
+  if (choiceResult.outcome === 'accepted') {
+    console.log('User accepted the install prompt');
+  } else {
+    console.log('User dismissed the install prompt');
+  }
   deferredPrompt = null;
+  installBtn.style.display = 'none'; 
 });
 
-// register sw
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
+window.addEventListener('appinstalled', () => {
+  console.log('PWA was installed');
+  installBtn.style.display = 'none';
+});
