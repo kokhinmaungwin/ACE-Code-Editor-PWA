@@ -25,9 +25,30 @@ You can write, edit, copy, clear code — and install it like a real app ✅
 
 ## 📂 Folder Structure
 
-/ (root) │── index.html │── app.js │── sw.js │── manifest.json └── /icons ├── icon-192.png └── icon-512.png
+-/ (root) │
+  - ── index.html │
+  - ── app.js │
+  - ── sw.js │
+  - ── manifest.json |
+  - ── icons 
+        -└── icon-192.png
+        -└── icon-512.png
 
 ---
+
+## How to Use
+
+1. Open the HTML file in your browser, e.g.:
+   - `Templates/template1/index.html`
+   - `Tools/tool1/html/index.html`
+2. Ensure the relative paths for CSS and JS are correct:
+   ```html
+   <link rel="stylesheet" href="../css/style.css">
+   <script src="../js/script.js"></script>
+
+
+---
+
 
 ## 📱 Install Guide
 
