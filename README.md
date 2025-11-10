@@ -31,7 +31,7 @@ You can write, edit, copy, clear code — and install it like a real app ✅
 
 ## 🚀 How to Run
 
-### ✅ Local (recommended)
+## ✅ Local (recommended)
 Use Live Server or any static server:
 
 ```bash
@@ -46,61 +46,50 @@ http://localhost:3000
 
 ---
 
-## 📱 Install App
+---
 
-Chrome → Menu → Add to Home Screen
+## 📱 Install Guide
 
-Desktop → Install app button appears
+### ✅ Desktop Chrome
+- Click Install button  
+OR  
+- Chrome Menu → “Install App”
 
-Works on Android / Desktop browsers
+### ✅ Android Chrome
+- Menu → Add to Home Screen
 
-
+> ⚠️ iOS support: Install OK ✅ / Offline cache sometimes ❌ (iOS limitation)
 
 ---
 
-## 🛠 Tech Used
+## 🛠 Tech Stack
 
-Technology	Purpose
-
-ACE Editor CDN	Code editing
-Vanilla JavaScript	Logic & UI
-Service Worker	Offline support
-Web Manifest	Installable app
-
-
+| Tool | Purpose |
+|------|--------|
+| ACE Editor CDN | Code editing engine |
+| HTML / JS | UI & logic |
+| Manifest.json | PWA config |
+| Service Worker | Offline support |
 
 ---
 
-## 📎 CDN Reference
+## 📌 Future Tasks (optional)
 
-- ACE Editor:
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"></script>
-
-
----
-
-## 💡 Future Improvements
-
-Multi-language support (JS, HTML, CSS, Python…)
-
-Save code to localStorage
-
-Dark/Light themes
-
-File import/export
-
-
+- Save code to localStorage
+- Choose languages (JS, HTML, CSS, Python…)
+- Dark / Light themes
+- Download code as file
+- Export / Import code
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author
 
-Created ❤️ Khin Maung Win
-Built for fun & productivity
-Offline coding anywhere!
+Built by **Khin Maung Win** 👨‍💻  
+For offline coding everywhere ⚡
 
+If you like it, ⭐ Star the repo!
 
 ---
 
-## ⭐️ If you like this tool, star the repo!
+Happy Coding 🎯🔥
