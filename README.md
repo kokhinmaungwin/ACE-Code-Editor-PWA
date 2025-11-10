@@ -29,25 +29,6 @@ You can write, edit, copy, clear code — and install it like a real app ✅
 
 ---
 
-## 🚀 How to Run
-
-## ✅ Local (recommended)
-Use Live Server or any static server:
-
-```bash
-npx serve .
-
-or VSCode Live Server extension.
-
-Then open in browser:
-
-http://localhost:3000
-
-
----
-
----
-
 ## 📱 Install Guide
 
 ### ✅ Desktop Chrome
