@@ -1,5 +1,5 @@
 const CACHE_NAME = 'ace-editor-pwa-v1';
-const OFFLINE_URL = "/ace-pwa/";
+const OFFLINE_URL = "/ace-code-editor-pwa/";
 
 self.addEventListener('install', event => {
   event.waitUntil(
