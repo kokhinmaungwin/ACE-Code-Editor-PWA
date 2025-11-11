@@ -9,8 +9,6 @@ self.addEventListener('install', event => {
         "/ace-code-editor-pwa/index.html",
         "/ace-code-editor-pwa/app.js",
         "/ace-code-editor-pwa/manifest.json",
-        "/ace-code-editor-pwa/icons/icon-192.svg",
-        "/ace-code-editor-pwa/icons/icon-512.svg",
         "/ace-code-editor-pwa/icons/icon-192.png",
         "/ace-code-editor-pwa/icons/icon-512.png",
         "https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.2/ace.js"
